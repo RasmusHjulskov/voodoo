@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Voodoo</title>
+	<link href="css/style.css" rel="stylesheet" media="all">
+
+	<!-- Iphone webapp settings -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+
+	<!-- Iphone 5 webapp settings -->
+	<meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
+
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+	<!-- TABLET ONLY META -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- Standard iPhone --> 
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icon_57.png" /> 
+	<!-- Retina iPhone --> 
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon_72.png" />
+	<!-- Standard iPad --> 
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon_114.png" />
+	<!-- Retina iPad --> 
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon_144.png" />
+	<link rel="apple-touch-startup-image" href="mages/icon_144.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+	<!-- iPhone SPLASHSCREEN-->
+    <link href="images/splashscreen/splashscreen_320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) SPLASHSCREEN-->
+    <link href="images/splashscreen/splashscreen_640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPad (portrait) SPLASHSCREEN-->
+    <link href="images/splashscreen/splashscreen_768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <!-- iPad (landscape) SPLASHSCREEN-->
+    <link href="images/splashscreen/splashscreen_748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <!-- iPad (Retina, portrait) SPLASHSCREEN-->
+    <link href="images/splashscreen/splashscreen_1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPad (Retina, landscape) SPLASHSCREEN-->
+    <link href="images/splashscreen/splashscreen_2048x1496.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+</head>
+<body>
+
+	<div id="uploadBG">
+		
+	</div>
+	
+	<div id="header">
+		<div id="menu"></div>
+		<div id="output">
+			<div id="logIn">
+				<img src="images/icon/lock.png" alt="log in">
+				<p id="usernametxt">Log in</p>
+			</div> <!-- end "logIn" -->
+		</div>
+		<div id="logo"></div>
+		<div id="logOut">
+			<button id="logOutBtn" class="button">Log Out</button>
+		</div>
+		
+	</div> 
+
+	<div id="menuOpen">
+
+		
+		<div id="menuContent">
+
+			<div class="eventCalendar" >
+				<div id="calenderWrapper">
+					<h1 id="calendarHeader">Events </h1> 
+					<button class="calZoom"></button>
+					<hr>
+					<div id="calenderEventsWrapper">
+						<ul id="events">
+							<li data-load="news_1"> 
+								<p class="eventDate"><span>JAN</span><br>1</p>
+								<p class="eventName">Event 1</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+							<li data-load="news_2">  
+								<p class="eventDate"><span>FEB</span><br>21</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+							<li data-load="news_3"> 
+								<p class="eventDate"><span>MAR</span><br>13</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+							<li data-load="news_4"> 
+								<p class="eventDate"><span>APR</span><br>12</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+							<li data-load="news_4">  
+								<p class="eventDate"><span>MAJ</span><br>24</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+							<li data-load="news_4"> 
+								<p class="eventDate"><span>JUN</span><br>25</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+							<li data-load="news_4"> 
+								<p class="eventDate"><span>JUL</span><br>17</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+							</li>
+							<li data-load="news_4"> 
+								<p class="eventDate"><span>AUG</span><br>26</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+							</li>
+							<li data-load="news_4">  
+								<p class="eventDate"><span>SEP</span><br>14</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">Underoverskrift</P>
+								<p class="eventLocation">Location</P>
+							</li>
+							<li data-load="news_4">  
+								<p class="eventDate"><span>OCT</span><br>2</p>
+								<p class="eventName">Event Name</p>
+								<p class="eventHeader">skrift</P>
+								<p class="eventLocation">Location</P>
+
+							</li>
+						</ul>
+					</div>
+				</div>		
+			</div>
+
+			<div class="tile" id="uploadBtn">
+				<div id="uploadTitle">Upload</div>
+			</div>
+			
+			<div class="tile" id="help" data-load="help_content"  ></div>
+			<div class="tile" id="info" data-load="info_content"></div>
+			
+			
+
+			<div id="contentOutput">
+				<div id="contentOutputClose"></div>
+				<div id="outputwrapper">
+					
+				</div>
+			</div>
+
+			<div class="headerTop">
+				<div id="headerTopTitle">Top 20</div>
+			</div> 
+			<div class="gallery" id="galleryTop" data-id="galleryTop">
+				
+				<div class="pic loader"></div>
+				<div class="pic loader"></div>
+				<div class="pic loader"></div>
+
+				
+			</div>
+			<div id="galleryOutput"></div>
+			
+
+			
+			<select id="addmore">
+			  <option selected="selected"> + gallery</option>
+			  <option value="newest">Newest</option>
+			  <option value="location">Location</option>
+			  <option value="name">Name</option>
+		
+			</select>
+			
+		
+			
+		</div><!-- end id "menuContent" -->
+	</div> <!-- end id "menuOpen" -->
+
+	<div id="loginWrapper">
+		<div id="loginClose"></div>
+		<h1 id="loginHeader">Log in</h1>	
+		<hr>	
+		<div class="error" id="loginError">
+	  		<p>You have to log in before using this feature</p>
+	  	</div>	
+
+		<input type="text" id="loginName" autofocus placeholder="Name">
+		<input type="password" id="loginPass" placeholder="Password">
+		<div class="button" id="loginSend">login</div>
+		<div class="button" id="signupSend">signup</div>
+	</div> <!-- end "loginWrapper"-->
+
+	<form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+		<div id="uploadClose"></div>
+	 
+
+	  		
+	  		<h1 id="uploadHeader">Upload picture</h1>
+	  		<hr>	
+	  		<div id="uploadStep1">
+	  		<div class="error" id="uploadError">
+	  			<p>Please choose an image</p>
+	  		</div>		
+
+		  	<input type="file" name="fileselect" id="fileselect" accept="image/x-png, image/gif, image/jpeg" >
+		  		<div id="nextBtnWrapper">
+				    <div id="nextBtn" class="button">
+				    	Next
+				    	<img src="images/icon/next.png" alt="next">
+				    </div>
+				   
+				</div>    
+		</div>
+		<div id="uploadStep2">
+			<div class="error" id="postError">
+		  		<p>Please fill out the form</p>
+	  		</div>	
+
+			<div class="uploadPic">
+			  	<div class="uploadPicBg" > </div>
+				<div class="uploadPostName"><input id="postName" autofocus type="text" placeholder="Insert your title"><br>
+				<span class="uploadUser"></span></div>
+				<div class="uploadPostLocation"><input id="postLocation"  type="text" placeholder="Insert your location"></div>
+				<div class="postID" ></div>
+			</div>
+
+			<div class="button" id="formBack"><img src="images/icon/previous.png" alt="previous">back</div>
+
+			<div class="button" id="postBtn">Save<img src="images/icon/diskette.png" alt="diskette"></div>
+		</div>
+	</form>
+	
+	
+		<div id="camera_view">
+			<div id="camera_1"></div>
+			<div id="camera_2"></div>
+			<div id="camera_3"></div>
+			<div id="camera_4"></div>
+		</div> <!-- end id "camera_view" -->
+	
+	
+
+	<!-- Gallery template -->
+	<script type="text/x-handlebars-template"  id="picture-template">
+		<!-- Feed Entry -->
+		<div class="pic">
+		
+		  	<div class="postBG" style="background: url({{File}})" > </div>
+			<div class="postName"><p>{{Name}}</p><span>{{User}}</span></div>
+			<button class="postZoom"></button>
+			<div class="postLocation"><p>{{Location}}</p></div>
+			<div class="postID" data-value="{{objectId}}"></div>
+			<button class="likeBtn"></button>
+
+		</div>
+	</script>
+	
+
+
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.7.min.js"></script>
+	
+	
+
+	<script>
+	Parse.initialize("kUhb5cjo8doj2bw4EUSqp1lpeiZCXbCVpWiknkDt", "hepkuNEsACqjLjVZXrrTEkRxqNTtQfbVmWtWzLGz");
+
+	</script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/hammer.js"></script>
+	
+	
+
+	<script src="js/app.js"></script>
+
+	
+</body>
+</html>

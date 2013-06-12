@@ -1,0 +1,1206 @@
+body {
+	/*background: url(http://dummyimage.com/640x960/666666/000000.png) no-repeat;*/
+	background: url(../images/camera.jpg) no-repeat center center fixed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+body, html {
+	width:100%;
+	height:100%;
+}
+
+html {
+
+	font-family: 'Karla', sans-serif;
+	
+	
+
+}
+
+* {
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+
+
+
+}
+
+/* JQUERY MOBILE LOADING DISABLE */
+.ui-loader{ display: none}
+
+h1 {
+	font-size: 1.4em;
+	font-weight:100;
+	
+}
+
+#header {
+	width:100%;
+	height:44px;
+	background: #74c043;
+	display: block;
+	z-index: 3;
+	position: fixed;
+	top:0;
+	left:0;
+
+}
+
+
+#menu {
+	width:44px;
+	height:44px;
+	background-color:#605d5d;
+	float:left;
+	position: relative;
+
+}
+
+#menu:before {
+	background: url(../images/icon/menu.png) no-repeat;
+	background-size: cover;
+	width:80%;
+	height: 80%;
+	content:"";
+	position: absolute;
+	left:10%;	
+	top:10%;
+
+}
+
+#output{
+	float:left;
+	display: block;
+	height:44px;
+}
+
+#output img{
+	float:left;
+	display: block;
+	width:36px;
+	margin:4px 0px 0px 10px;
+
+}
+
+#output p{
+	float:left;
+	display: block;
+	margin:12px 0px 0px 0px;
+	padding: 0px 10px 0px 4px;
+}
+
+#logIn {
+	width:100%;
+	height: 100%;
+}
+
+#loggedIn p {
+	white-space:nowrap; 
+	width:80px; 
+	overflow:hidden; 
+	text-overflow:ellipsis
+
+}
+
+#logOut {
+	width:125px;
+	height:auto;
+	background-color:white;
+	position: absolute;
+	left:52px;
+	top:110%;
+	z-index: 30;
+	padding:1%;
+	z-index:1;
+	box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.4);
+	display: none;
+}
+
+#logOutBtn {
+	width:98%;
+}
+
+#logOut:before {
+	width:0.1%;
+	padding:10%;
+	background-color:white;
+	content:"";
+	position:absolute;
+	top:-6%;
+	left:7%;
+	z-index:0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	
+}
+
+#logOutBtn {}
+
+.errorBorder {
+	border:red 2px solid;
+}
+
+.error {
+	width:98%;
+	margin:1%;
+	padding:20px 2% 20px 23%;
+	background: rgba(0,0,0,0.25);
+	border-radius: 12px;
+	float: left;
+	position: relative;;
+	display: none;
+	
+
+}
+
+.error:before {
+	position: absolute;
+	width:48px;
+	height:48px;
+	content:"";
+	left:5%;
+	top:50%;
+	margin-top:-24px;
+	background:url(../images/icon/cancel.png) no-repeat;
+	background-size: contain ;
+}
+
+
+.error img{
+	position: relative;;
+	display: block;
+	float: left;
+	height:48px !important;
+	width:48px !important;
+}
+
+.error p{
+	position: relative;
+	display: block;
+	float: left;
+}
+
+
+
+
+#logo {
+	float:right;
+	position: relative;
+	direction: block;
+	height:44px;
+	background:url(../images/logo_black.png) no-repeat;
+	background-size: cover;
+	background-position: right;
+	width: 150px;
+	margin:2px 2px 0 0 ;
+}
+
+#menuOpen {
+	position: absolute;
+	width:100%;
+	height:auto;
+	float:left;
+	/*background:#efe4e4;*/
+	padding:2%;
+	overflow:hidden;
+	z-index: 2;
+	margin-left:-100%;
+	margin-top:50px;
+
+
+}
+
+
+
+#menuOpen:before {
+	width:0.1%;
+	padding:3%;
+	background-color:white;
+	content:"";
+	position:absolute;
+	top:1%;
+	left:3%;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+.galleryBG, #uploadBG {
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.85);
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index:5;
+}
+
+.galleryBG {
+	z-index:2 !important;
+}
+
+#menuContent {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	padding:2%;
+	float:left;
+}
+
+.tile {
+	width:11%;
+	padding:11.5%;
+	background-color:#045839;
+	float:left;
+	margin: 1%;
+	position:relative;
+	-webkit-transition: width 1s ease;
+
+}
+
+#addmore {
+	width:98%;
+	margin:1%;
+	height:50px;
+	/*border-radius: 10px;*/
+	border: 2px dashed rgba(0,0,0,0.2);
+	color:rgba(0,0,0,0.6);
+	display: block;
+	float:left;
+	position: relative;
+	text-align: center;
+}
+select {
+	border: 0 none;
+    color: #FFFFFF;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: #58B14C;
+
+}
+#events{
+	position: relative;
+	list-style: none;
+	float: left;
+	width:100%;
+	
+}
+
+#events li{
+	border-top: 1px solid rgba(0,0,0,0.1);
+	overflow: auto;
+	padding: 2px;
+}
+
+#events li:first-child {
+	border-top: none;
+}
+
+#events:before, #events:after {
+	width:20px;
+	height:20px;
+	position: absolute;
+	content:"";
+	right:0;
+	
+}
+
+#events:before {
+	background: url(../images/icon/down.png);
+	background-size: cover;
+	top:0;
+}
+#events:after {
+	background: url(../images/icon/up.png);
+	background-size: cover;
+	bottom:0;
+}
+.eventCalendar {
+	width:45%;
+	padding:24%;
+	background-color:#74c043;
+	float:right;
+	margin: 1%;
+	position:relative;
+
+	-webkit-transition: padding 0.1s ease;
+}
+
+
+#calenderWrapper {
+	position: absolute;
+	top:0;
+	left: 0;
+	width:92%;
+	height:92%;
+	overflow-x:auto;
+	margin:4%;
+	
+	-webkit-overflow-scrolling: touch;
+
+}
+
+#calendarHeader {
+	margin-left:41px;
+	position: relative;
+}
+
+
+#calendarHeader:before{
+	content:"";
+	position: absolute;
+	left:-40px;
+	bottom:0;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/calendar.png);
+	background-size: cover;
+
+}
+
+#loginHeader {
+	margin-left:41px;
+	position: relative;
+}
+
+
+#loginHeader:before{
+	content:"";
+	position: absolute;
+	left:-40px;
+	bottom:0;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/lock.png);
+	background-size: cover;
+
+}
+
+#uploadHeader {
+	margin-left:41px;
+	position: relative;
+}
+
+
+#uploadHeader:before{
+	content:"";
+	position: absolute;
+	left:-40px;
+	bottom:0;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/image.png);
+	background-size: cover;
+	z-index:1;
+
+}
+
+#calendarHeader {
+	margin-left:41px;
+	position: relative;
+}
+
+
+#calendarHeader:before{
+	content:"";
+	position: absolute;
+	left:-40px;
+	bottom:0;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/calendar.png);
+	background-size: cover;
+
+}
+
+#calenderEventsWrapper{
+	overflow:auto;
+	width:100%;
+	-webkit-overflow-scrolling: touch;
+	padding: -4px 0 10px 0; 
+	
+}
+
+.eventDate{
+	float:left;
+	display: block;
+	width:30%;
+	clear:both;
+	text-align: center;
+	font-size: 18px;
+	margin-top:-3px;
+}
+
+.eventDate span {
+	color:#ce3e3e;
+	font-size: 15px;
+	
+}
+
+.eventName{
+	float:right;
+	display: block;
+	width:70%;
+	font-size: 15px;
+}
+
+.eventHeader{
+	float:right;
+	display: block;
+	width:70%; 
+	font-size: 11px;
+	color:rgba(0,0,0,0.6);
+	margin:-2px 0 0 0 ;
+	
+
+}
+.eventLocation{
+	float:right;
+	display: block;
+	width:70%; 
+	font-size: 10px;
+	color:rgba(0,0,0,0.6);
+	margin:-2px 0 0 0 ;
+	
+
+}
+
+
+#contentOutput {
+
+	width:98%;
+	height:0px;
+	background-color:#045839;
+	float:left;
+	margin: 0%;
+	position:relative;
+	-webkit-transition: height 1s ;
+	
+}
+
+#contentOutputClose, #uploadClose, #loginClose {
+	width:28px;
+	height:28px;
+	position: absolute;
+	top:0;
+	right:0;
+	margin:1%;
+	float:right;
+	background: url(../images/icon/close.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	z-index:1;
+	
+}
+#contentOutputClose {
+	display: none;
+}
+
+#outputwrapper {
+	display: none;
+	color:white;
+	font-weight:100;
+}
+
+.tileTop {
+}
+
+.tileTop:before {
+	content:"";
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:-50%;
+	left: 0;
+	background-color:#045839;
+}
+
+#fileupload, #loginWrapper {
+	position: fixed;
+	background-color:#74c043;
+	width:96%;
+	max-height: 96%;
+	
+	height:auto;
+	top:2%;
+	left:2%;
+	display: none;
+	z-index:5;
+	padding:2%;
+}
+#loginWrapper {
+	overflow: auto;
+}
+/*#fileupload{
+	display: block !important;
+}*/
+
+input#fileselect {
+
+
+}
+.uploadPic {
+	width:20%;
+	padding:49%;
+	position: relative;
+	margin:1%;
+	float: left;
+	display: block;
+
+	
+}
+
+.uploadPicBg {
+	background: url(../images/loader_big.gif) no-repeat center 40%;
+	background-color:#c9c9c9;
+	width:100%;
+	height:85%;
+	position: absolute;
+	left: 0;
+	top: 15%;
+	
+}
+
+.uploadPicBg:before {
+	width:100%;
+	height:17.9%;
+	content:"";
+	left:0;
+	top:-17.9%;
+	position: absolute;
+	background-color:#045839;
+}
+
+#loginWrapper {
+
+	background-color:#74c043;
+}
+
+#loginPass {
+	position: relative;
+	padding-left:10%;
+	
+
+}
+#loginName {
+	position: relative;
+
+	padding-left:10%;
+	background: url(images/icon/close.png);
+	background-size: 10px;
+	background-position: 7px 7px;
+    background-repeat: no-repeat;
+	background-color:white;
+}
+#logingNameWrapper:before {
+	content:"";
+	position: absolute;
+	left:0;
+	top:0;
+	height:200px;
+	width:200px;
+	background-color:blue;
+	background: url(images/icon/close.png) no-repeat;
+}
+
+#loginPass:before{
+	content:"";
+	position: absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:10%;
+	background: url(images/icon/close.png) no-repeat;
+}
+input {
+	width:96%;
+	margin:2%;
+	/*box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);*/
+	border:0;
+	padding:6px;
+	border-radius:4px;
+
+}
+
+.button {
+	width:48%;
+	padding:5%;
+	margin: 1%;
+	background-color:#045839;
+	color:white;
+	float:left;
+	display: block;
+	position: relative;
+}
+
+.button img {
+	float:right;
+	position:absolute;
+	right:4%;
+	top:10%;
+	height:80%;
+	width:auto;
+}
+button {
+	border:0;
+	outline: 0;
+}
+
+#nextBtnWrapper {
+	width:52%;
+	height:auto;
+	background-color: #74c043;
+	position: absolute;
+	top:100%;
+	right: 0%;
+	padding:0 3% 3% 3%;
+}
+
+#nextBtnWrapper .button {
+	width:100%;
+	padding:10.1%;
+}
+#nextBtn {
+	float: right;
+	margin:0 !important;
+}
+
+#formBack img{
+	left:4% ;
+}
+
+#formBack {
+	text-align: right;
+}
+
+
+
+.uploadPic input {
+	background-color:transparent;
+	border:none;
+	color:white;
+	font-size:1.1em;
+	padding:0% !important;
+	display: block;
+
+}
+
+.uploadPic input:focus {
+	outline: 0;
+}
+
+.uploaduser {
+	position: absolute;
+	left: 5px
+	bottom:1px;
+}
+ 
+.uploadUser p {
+	margin-top:2px;
+	color:rgba(255,255,255,0.6);
+	display: block;
+	clear:both;
+}
+
+hr {
+	border:solid 1px rgba(255,255,255,0.6);
+	margin: 0px 0 4px 0;
+
+}
+
+#uploadStep1 {
+
+}
+
+#uploadStep2 {
+	display:none
+}
+
+#news {
+	
+}
+
+.headerTop, .headerNewest, .headerLocation, .headerName  {
+	width:98%;
+	padding:5%;
+	margin: 1%;
+	
+	color:white;
+	float:left;
+	display: block;
+	position: relative;
+}
+
+.headerTop {
+	background-color:#045839;
+}
+
+.headerNewest {
+	background-color:#582e91;
+}
+
+.headerLocation{
+	background-color:#74c043;;
+}
+
+.headerName  {
+	background-color:#c43f97;;
+}
+
+#headerTopTitle, .headerNewest:before, .headerLocation:before, .headerName:before  {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	text-align: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+
+
+.headerNewest:before {
+	content:"Newest";
+}
+
+.headerLocation:before {
+	content:"Location";
+}
+
+.headerName:before {
+	content:"Name";
+}
+
+#galleryOutput {
+	float:left;
+	display: block;
+	width:100%;
+}
+
+.closeNewest, .closeLocation, .closeName{
+	
+
+
+	width:28px;
+	height:28px;
+	position: absolute;
+	top:0;
+	right:0;
+	margin:1%;
+	float:right;
+	background: url(../images/icon/close.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.gallery {
+	height:100%;
+	width:1000%;
+	display:block;
+	float: left;
+	z-index:3;
+	position: relative;
+
+}
+
+/*
+
+.gallery:after {
+	content:" TOP 20";
+	height:12%;
+	width:4.85%;
+	background-color:rgba(0,0,0,0.5);
+	position: absolute;
+	left:-2.58%;
+	top:44%;
+	z-index: 1;
+	text-align: center;
+	border-radius: 14px 14px 0px 0px;
+
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);	
+}
+
+*/
+
+
+.pic {
+	width:0.1%;
+	padding:2.4%;
+	background-color:#045839;
+	float:left;
+	margin: 0.1%;
+	position: relative;
+	counter-increment: top;
+
+
+}
+
+.loader:before {
+	content: "";
+	background: url(../images/loader_big.gif) no-repeat center center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height:100%;
+	background-color:;
+}
+
+#galleryNewest .postBG:before {
+	background-color: #582e91 !important;
+}
+
+#galleryLocation .postBG:before {
+	background-color: #74c043 !important;
+}
+
+#galleryName .postBG:before {
+	background-color: #c43f97 !important;
+}
+
+.postID {
+	display:none;
+}
+
+.likeBtn {
+	z-index:5;
+	position: absolute;
+	right:5px;
+	bottom:10px;
+	width:30%;
+	height:30%;
+	background: url(../images/icon/star_black.png) no-repeat;
+	opacity: 0.8;
+	background-size: cover;
+	transition: 0.2s all ease;
+	-webkit-transition: 0.2s all ease;
+	-moz-transition: 0.2s all ease;
+	display: block;
+	border:0;
+	outline:0;
+}
+
+.selected {
+	background: url(../images/icon/star.png) no-repeat;
+	background-size: cover;
+	opacity: 1;
+}
+
+
+#newPost {
+	float:left;
+	position: absolute;
+	right:0;
+	top:50%;
+}
+
+.postBG {
+	width:100%;
+	height:85%;
+	position: absolute;
+	left: 0;
+	top: 15%;
+	background-size: cover !important;
+}
+.postBG:before {
+	width:100%;
+	height:17.9%;
+	content:"";
+	left:0;
+	top:-17.9%;
+	position: absolute;
+	background-color:#045839;
+}
+
+
+
+.postName {
+	width:75%;
+	height: 15%;
+	position: absolute;
+	left: 17%;
+	top: 0%;
+
+
+	display: -webkit-box; display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+ 
+    -webkit-box-align: center; -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+	
+}
+
+.uploadPostName {
+	width:80%;
+	height: 15%;
+	position: absolute;
+	left: 17%;
+	top: 0%;
+
+
+	display: -webkit-box; display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+ 
+    -webkit-box-align: center; -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+	
+}
+
+.postName:after {
+	content: counter(top);
+	position: absolute;
+	left:-16%;
+	font-size: 1.1em;
+	top:0;
+	height:100%;
+	color: white;
+	display: -webkit-box; display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+ 
+    -webkit-box-align: center; -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+.postName p {
+	font-size: 14px;
+	display: block;
+	color: rgba(255,255,255,1);
+}
+
+.postName span {
+	position: absolute;
+	left: 0;
+	top:60%;
+	font-size: 10px;
+	display: block;
+	color: rgba(255,255,255,0.6);
+}
+
+.postZoom, .calZoom {
+	width:20%;
+	height:15%;
+	margin: 0% 0 0 3%;
+	position: absolute;
+	right: 0;
+	top:0px;
+	background: url(../images/icon/zoom.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+	border:0;
+	outline:0;
+
+}
+.calZoom {
+	width:26px;
+	height:26px;
+	background-size: 80%;
+}
+
+.postLocation, .uploadPostLocation {
+	width: auto;
+	padding:5px 10px 5px 35px;
+	position: absolute;
+	left: 0;
+	bottom:5%;
+	background-color:rgba(0,0,0,0.7);
+	color:white;
+}
+.uploadPostLocation {
+	padding:5px 10px 5px 45px;
+}
+
+.postLocation:before {
+	background: url(../images/icon/location.png) no-repeat;
+	background-size: 65%;
+	background-position: center center;
+	content:"";
+	position: absolute;
+	left:8px;
+	top: 0px;
+	width:29px;
+	height:29px;
+}
+.uploadPostLocation:before {
+	background: url(../images/icon/location.png) no-repeat;
+	background-size: 65%;
+	background-position: center center;
+	content:"";
+	position: absolute;
+	left:8px;
+	top: 0px;
+	width:34px;
+	height:100%;
+	
+	
+}
+
+/*#camera_view {
+	z-index: 0;
+	background-color:red;
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	top:0%;
+	left:0;
+	background: url(../images/camera.jpg) no-repeat;
+	background-size:cover;
+	background-position: top center;
+
+	
+}*/
+
+#camera_1, #camera_2, #camera_3, #camera_4  {
+	width:20%;
+	padding: 10%;
+	position: absolute;
+
+}
+#camera_1 {
+	left:20%;
+	top:25%;
+	border-left: 5px solid black;
+	border-top:5px solid black;
+}
+#camera_2 {
+	left:60%;
+	top:25%;
+	border-right: 5px solid black;
+	border-top:5px solid black;
+}
+#camera_3 {
+	left:20%;
+	top:65%;
+	border-left: 5px solid black;
+	border-bottom:5px solid black;
+}
+#camera_4 {
+	left:60%;
+	top:65%;
+	border-right: 5px solid black;
+	border-bottom:5px solid black;
+}
+
+/* ------------------------------------------------*\
+	ICONS
+\* ------------------------------------------------*/
+#uploadBtn {
+	background-color:#c43f97;
+	margin-right:25%;
+}
+
+#uploadBtn:before{
+	background: url(../images/icon/image.png) no-repeat;
+	background-size: 70%;
+	background-position: center center;
+
+	content:"";
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left: 22%;
+	background-color:#c43f97;
+	z-index: 4;
+}
+#uploadTitle{
+
+	color:white;
+	
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left: 109%;
+	background-color:#c43f97;
+	z-index: 5;
+	box-sizing:border-box;
+	 display: -webkit-box; display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+ 
+   -webkit-box-align: center; -moz-box-align: center;
+   -ms-flex-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+
+}
+#help {
+	background-color:#74c043;
+}
+
+#info {
+	background-color:#582e91;
+}
+
+#info:before, #calendar:before, #help:before{
+	top:0%;
+	left: 0%;
+	width:100%;
+	height:100%;
+	position: absolute;
+	content:"";
+	background-position: center center;
+}
+
+#info:before{
+	background: url(../images/icon/info.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+}
+
+#calendar:before{
+	background: url(../images/icon/calendar.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+}
+
+#help:before{
+	background: url(../images/icon/help.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+}
+
+
